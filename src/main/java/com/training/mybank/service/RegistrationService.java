@@ -66,7 +66,7 @@ public class RegistrationService {
             int number = min + RANDOM.nextInt(max - min + 1);
             accountNumber = String.valueOf(number);
 
-            if (!accountRepository.existsByAccountNumber(accountNumber)) {
+            if (accountRepository.existsByAccountNumber(accountNumber)) {
                 break;
             }
         }

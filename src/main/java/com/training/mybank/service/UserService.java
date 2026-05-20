@@ -38,7 +38,6 @@ public class UserService {
         PasswordUtil.validateStrength(newPassword);
         user.setPassword(PasswordUtil.hash(newPassword));
         userRepository.save(user);
-        
 
     }
     @Transactional
